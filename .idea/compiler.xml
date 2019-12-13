@@ -7,15 +7,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="dubbo-api" />
+        <module name="dubbo-comom" />
         <module name="dubbo-consumer" />
-        <module name="dubbo-monitor" />
         <module name="dubbo-provider" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dubbo-comom" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="dubbo-api" options="-parameters" />
+      <module name="dubbo-comom" options="-parameters" />
       <module name="dubbo-consumer" options="-parameters" />
       <module name="dubbo-monitor" options="-parameters" />
       <module name="dubbo-provider" options="-parameters" />
