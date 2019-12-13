@@ -14,13 +14,9 @@ import org.bson.Document;
 import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Iterator;
+
 import java.util.List;
-import java.util.Properties;
+
 
 public enum MongoDbDao {
     /**
