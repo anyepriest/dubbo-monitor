@@ -5,10 +5,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>dubbo-comom</module>
-        <module>dubbo-comom</module>
-        <module>dubbo-comom</module>
-        <module>dubbo-comom</module>
-        <module>comom</module>
+        <module>dubbo-api</module>
+        <module>dubbo-consumer</module>
+        <module>dubbo-provider</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
