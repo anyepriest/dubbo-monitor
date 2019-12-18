@@ -1,6 +1,8 @@
 package com.lzy.redis;
 
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
+import org.springframework.core.io.ClassPathResource;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -39,9 +41,13 @@ public class JedisUtil {
      */
     static {
         try {
-            InputStream stream = JedisUtil.class.getClassLoader().getResourceAsStream("application.properties");
-            Properties ps = new Properties();
-            ps.load(stream);
+//            InputStream stream = JedisUtil.class.getClassLoader().getResourceAsStream("application.yml");
+//            String yamlSource = JedisUtil.class.getClassLoader().getResource("application.yml").getPath();
+            YamlPropertiesFactoryBean yaml = new YamlPropertiesFactoryBean();
+            yaml.setResources(new ClassPathResource("application.yml"));
+            Properties ps = yaml.getObject();
+//            Properties ps = new Properties();
+//            ps.load(stream);
             HOST = ps.getProperty("spring.redis.host");
             PORT = Integer.parseInt(ps.getProperty("spring.redis.port"));
             TIMEOUT = Integer.parseInt(ps.getProperty("spring.redis.timeout"));

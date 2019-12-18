@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzy.dubbo.db.dao.MonitorSystemDetailMapper">
+  <resultMap id="BaseResultMap" type="com.lzy.dubbo.db.dto.MonitorSystemDetail">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="system_detail_key" jdbcType="VARCHAR" property="systemDetailKey" />
+    <result column="system_key" jdbcType="VARCHAR" property="systemKey" />
+    <result column="system_type" jdbcType="VARCHAR" property="systemType" />
+    <result column="system_model" jdbcType="VARCHAR" property="systemModel" />
+    <result column="system_status" jdbcType="VARCHAR" property="systemStatus" />
+    <result column="start_time" jdbcType="VARCHAR" property="startTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    system_detail_key, system_key, system_type, system_model, system_status, start_time
+  </sql>
+</mapper>

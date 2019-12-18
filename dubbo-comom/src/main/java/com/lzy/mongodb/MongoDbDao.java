@@ -3,7 +3,7 @@ package com.lzy.mongodb;/*
  *@date 19-12-13下午2:12
  */
 
-import com.lzy.constant.constProps;
+import com.lzy.common.cns.constProps;
 import com.mongodb.*;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;

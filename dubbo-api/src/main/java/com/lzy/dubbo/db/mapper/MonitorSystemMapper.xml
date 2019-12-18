@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzy.dubbo.db.dao.MonitorSystemMapper">
+  <resultMap id="BaseResultMap" type="com.lzy.dubbo.db.dto.MonitorSystem">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="system_key" jdbcType="VARCHAR" property="systemKey" />
+    <result column="user_key" jdbcType="VARCHAR" property="userKey" />
+    <result column="ip_address" jdbcType="VARCHAR" property="ipAddress" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    system_key, user_key, ip_address
+  </sql>
+</mapper>

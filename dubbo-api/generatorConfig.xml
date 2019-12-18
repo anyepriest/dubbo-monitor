@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+   PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+ <context id="mysql"  targetRuntime="MyBatis3" defaultModelType="flat">
+
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+          <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+        </plugin>
+        <plugin type="com.lzy.dubboapi.MyDBGenPlugin">
+            <property name="customSerializable" value="true"/>
+        </plugin>
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/test" userId="root" password="root">
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <javaModelGenerator targetPackage="com.lzy.dubbo.db.dto" targetProject="E:\\program\\dubbo-monitor\\dubbo-api\\src\main\\java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+            <property name="rootClass" value="com.lzy.dubbo.db.dto.BaseDto"/>
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="com.lzy.dubbo.db.mapper" targetProject="E:\\program\\dubbo-monitor\\dubbo-api\\src\main\\java">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.lzy.dubbo.db.dao" targetProject="E:\\program\\dubbo-monitor\\dubbo-api\\src\main\\java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+
+     <table tableName="monitor_user" domainObjectName="MonitorUser"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+     <table tableName="monitor_system_detail" domainObjectName="MonitorSystemDetail"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+     <table tableName="monitor_system" domainObjectName="MonitorSystem"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+ </context>
+</generatorConfiguration>

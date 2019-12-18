@@ -3,7 +3,7 @@ package com.lzy.dubboapi;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class SpringBootApiApplicationTests {
 
     @Test

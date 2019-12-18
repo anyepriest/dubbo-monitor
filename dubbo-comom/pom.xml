@@ -8,8 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <groupId>com.lzy</groupId>
     <artifactId>dubbo-comom</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>dubbo-comom</name>
 <dependencies>
     <dependency>
         <groupId>org.mongodb</groupId>
@@ -45,6 +47,18 @@
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-lang3</artifactId>
         <version>3.8</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>5.0.6.RELEASE</version>
+        <scope>compile</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>3.2.8.RELEASE</version>
+        <scope>compile</scope>
     </dependency>
     <!--<dependency>-->
         <!--<groupId>com.fasterxml.jackson.core</groupId>-->

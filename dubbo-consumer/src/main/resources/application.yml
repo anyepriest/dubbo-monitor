@@ -1,0 +1,41 @@
+demo:
+    service:
+        version: 1.0.0
+dubbo:
+    application:
+        id: dubbo-consumer-demo
+        name: dubbo-consumer-demo
+    protocol:
+        id: dubbo
+        name: dubbo
+        port: 20080
+        threads: 10
+    registry:
+        address: 127.0.0.1:2181
+        id: my-registry1
+        protocol: zookeeper
+        timeout: 30000
+management:
+    server:
+        port: 8091
+server:
+    port: 8090
+spring:
+    application:
+        name: dubbo-consumer-demo
+    redis:
+        database: 0
+        host: localhost
+        jedis:
+            pool:
+                max-active: 200
+                max-idle: 10
+                max-wait: -1
+                min-idle: 0
+        password: ''
+        port: 6379
+        timeout: 1000
+logging:
+  level: {
+  com.lzy.dubboconsumer: "debug"
+  }

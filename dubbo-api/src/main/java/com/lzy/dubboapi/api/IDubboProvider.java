@@ -4,8 +4,10 @@ package com.lzy.dubboapi.api;/*
  */
 
 
+import com.lzy.common.web.ResponseDto;
 
 public interface IDubboProvider {
 
     Response sayHello();
+    ResponseDto hello();
 }
