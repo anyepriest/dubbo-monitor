@@ -17,7 +17,7 @@ dubbo:
         protocol: zookeeper
         timeout: 30000
     scan:
-        basePackages: com.lzy.dubboprovider.server
+        basePackages: com.lzy.provider.server
 server:
     port: 8092
 spring:
@@ -39,5 +39,5 @@ spring:
         timeout: 1000
 logging:
   level: {
-  com.lzy.dubboprovider: "debug"
+  com.lzy.provider: "debug"
   }

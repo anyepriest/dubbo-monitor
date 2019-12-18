@@ -1,4 +1,4 @@
-package com.lzy.dubboconsumer.consumer;/*
+package com.lzy.consumer.controller;/*
  *@auther chenz
  *@date 19-12-12上午10:20
  */
@@ -21,8 +21,8 @@ public class DemoConsumerController {
 
     @RequestMapping("/sayHello")
     public Response sayHello() {
-        JedisUtil.setString("consumer","this is consumer");
-        System.out.println(JedisUtil.getString("consumer"));
+        JedisUtil.setString("controller","this is controller");
+        System.out.println(JedisUtil.getString("controller"));
         return dubboProvider.sayHello();
     }
     @RequestMapping("/hello")

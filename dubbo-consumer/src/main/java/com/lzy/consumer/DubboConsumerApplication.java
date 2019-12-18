@@ -1,4 +1,4 @@
-package com.lzy.dubboconsumer;
+package com.lzy.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

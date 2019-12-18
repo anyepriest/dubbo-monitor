@@ -3,8 +3,8 @@ demo:
         version: 1.0.0
 dubbo:
     application:
-        id: dubbo-consumer-demo
-        name: dubbo-consumer-demo
+        id: dubbo-controller-demo
+        name: dubbo-controller-demo
     protocol:
         id: dubbo
         name: dubbo
@@ -22,7 +22,7 @@ server:
     port: 8090
 spring:
     application:
-        name: dubbo-consumer-demo
+        name: dubbo-controller-demo
     redis:
         database: 0
         host: localhost
@@ -37,5 +37,5 @@ spring:
         timeout: 1000
 logging:
   level: {
-  com.lzy.dubboconsumer: "debug"
+  com.lzy.consumer: "debug"
   }

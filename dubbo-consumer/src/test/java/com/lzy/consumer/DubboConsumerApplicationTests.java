@@ -1,13 +1,13 @@
-package com.lzy.dubboprovider;
+package com.lzy.consumer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DubboProviderApplicationTests {
+class DubboConsumerApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }

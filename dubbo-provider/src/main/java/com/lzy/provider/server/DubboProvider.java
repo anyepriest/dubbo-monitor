@@ -1,4 +1,4 @@
-package com.lzy.dubboprovider.server;/*
+package com.lzy.provider.server;/*
  *@auther chenz
  *@date 19-12-12上午10:39
  */
@@ -14,10 +14,8 @@ import com.lzy.dubbo.db.dto.MonitorUser;
 import com.lzy.dubboapi.api.IDubboProvider;
 import com.lzy.dubboapi.api.Response;
 import com.lzy.mongodb.MongoDbUtils;
-import com.lzy.redis.JedisUtil;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
-import tk.mybatis.mapper.entity.Example;
 
 @Service(
         version = "1.0.0",
