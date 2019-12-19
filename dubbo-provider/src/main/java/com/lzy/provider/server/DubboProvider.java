@@ -15,8 +15,9 @@ import com.lzy.dubboapi.api.IDubboProvider;
 import com.lzy.dubboapi.api.Response;
 import com.lzy.mongodb.MongoDbUtils;
 import org.bson.Document;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
 @Service(
         version = "1.0.0",
         application = "${dubbo.application.id}",
@@ -24,6 +25,8 @@ import org.springframework.beans.factory.annotation.Autowired;
         registry = "${dubbo.registry.id}"
 )
 public class DubboProvider implements IDubboProvider {
+    private static final Logger logger = LoggerFactory.getLogger(DubboProvider.class);
+
     @Autowired
     MonitorUserMapper mMonitorUserMapper;
     @Override
@@ -51,12 +54,13 @@ public class DubboProvider implements IDubboProvider {
             MonitorUser selectUser = new MonitorUser();
             selectUser.setUserKey(userDto.getUserKey());
             selectUser = mMonitorUserMapper.select(selectUser).get(0);
+            logger.debug(selectUser.geteMail());
             return SpringUtils.returnSuccess(selectUser);
         }catch (LZYException ex){
-//            log.debug(ex.getMessage());
+            logger.debug(ex.getMessage());
             return SpringUtils.returnError(ex.getMessage());
         }catch (Throwable ex){
-//            log.error("", ex);
+            logger.error("", ex);
             return SpringUtils.returnInfo(LZYDE.SYS_EXCEPTION, null);
         }
     }
