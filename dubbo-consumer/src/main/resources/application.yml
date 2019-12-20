@@ -35,6 +35,8 @@ spring:
         password: ''
         port: 6379
         timeout: 1000
+    mvc:
+        dispatch-options-request: true
 logging:
   level: {
   com.lzy.consumer: "debug"

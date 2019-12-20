@@ -1,11 +1,13 @@
 package com.lzy.consumer.intercepter;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@Component
 public class AjaxDomainInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(
@@ -14,7 +16,9 @@ public class AjaxDomainInterceptor implements HandlerInterceptor {
             throws Exception {
         response.setHeader("Access-Control-Allow-Origin", "*");//设置允许哪些域名应用进行ajax访问
         response.setHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-        response.setHeader("Access-Control-Allow-Headers", "Content-Type");
+        response.setHeader("Access-Control-Allow-Headers", "x-requested-with,content-type");
+        response.setHeader("Access-Control-Max-Age", "3600");
+
         return true;
     }
 
