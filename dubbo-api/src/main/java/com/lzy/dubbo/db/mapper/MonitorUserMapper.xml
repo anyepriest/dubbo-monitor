@@ -21,4 +21,8 @@
     -->
     user_key, user_name, password, e_mail, phone, status, create_time, update_time, role
   </sql>
+  <select id="selectUserByName" parameterType="com.lzy.dubbo.db.dto.MonitorUser" resultMap="com.lzy.dubbo.db.dto.MonitorUser">
+select * from monitor_user
+where  user_name=#{userName}
+  </select>
 </mapper>

@@ -16,8 +16,12 @@ public class AjaxDomainInterceptor implements HandlerInterceptor {
             throws Exception {
         response.setHeader("Access-Control-Allow-Origin", "*");//设置允许哪些域名应用进行ajax访问
         response.setHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-        response.setHeader("Access-Control-Allow-Headers", "x-requested-with,content-type");
+        response.setHeader("Access-Control-Expose-Headers","content-type, cache,Authorization,token");
+        response.setHeader("Access-Control-Allow-Headers", "x-requested-with,content-type,Authorization,token");
         response.setHeader("Access-Control-Max-Age", "3600");
+
+
+
 
         return true;
     }
@@ -31,5 +35,6 @@ public class AjaxDomainInterceptor implements HandlerInterceptor {
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
             throws Exception {
+
     }
 }
