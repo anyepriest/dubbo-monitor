@@ -20,7 +20,7 @@ public class JwtTokenUtils {
     private static final String ISS = "echisan";
 
     // 角色的key
-    private static final String ROLE_CLAIMS = "rol";
+    private static final String ROLE_CLAIMS = "system";
 
     // 过期时间是3600秒，既是1个小时
     private static final long EXPIRATION = 3600L;
